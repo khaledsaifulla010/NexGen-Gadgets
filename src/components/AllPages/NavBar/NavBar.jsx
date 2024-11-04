@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import "./NavBar.css";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaHeart } from "react-icons/fa";
 
 const NavBar = () => {
   return (
@@ -27,10 +27,10 @@ const NavBar = () => {
           <div
             tabIndex={0}
             role="button"
-            className="text-2xl text-orange-600 flex"
+            className="text-2xl text-orange-600 flex mr-24"
           >
             <FaShoppingCart></FaShoppingCart>
-            <div className="badge -mt-2 absolute ml-3 font-black">+99</div>
+            <div className="badge -mt-2 ml-3 absolute font-black">+99</div>
           </div>
           <ul
             tabIndex={0}
@@ -39,6 +39,8 @@ const NavBar = () => {
             <h1>Work Soon!</h1>
           </ul>
         </div>
+        <FaHeart className="text-2xl text-red-600 flex absolute right-12 mr-24"></FaHeart>
+        <div className="badge -mt-5 right-28  absolute font-black">+99</div>
       </div>
     </div>
   );
