@@ -3,9 +3,9 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { MdDeleteForever } from "react-icons/md";
 import { FaDollarSign, FaSortAmountDown } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const DashBoard = () => {
-  const { cartItems } = useCart();
+  const { cartItems, removeFromCart } = useCart();
 
   const totalPrice = cartItems
     .map((item) => item.price)
@@ -13,16 +13,24 @@ const DashBoard = () => {
     .toFixed(2);
   console.log(totalPrice);
 
-  const [sortCart, setSortCart] = useState(cartItems);
+  const [sortType, setSortType] = useState("default");
+  const [sortedItems, setSortedItems] = useState([...cartItems]);
 
-  const handleSortByPrice = (sortType) => {
-    const sortCartByPrice = [...cartItems].sort((a, b) => {
+  const handleSortByPrice = (type) => {
+    setSortType(type);
+  };
+
+  useEffect(() => {
+    const sorted = [...cartItems].sort((a, b) => {
       if (sortType === "price") {
         return b.price - a.price;
       }
       return 0;
     });
-    setSortCart(sortCartByPrice);
+    setSortedItems(sorted);
+  }, [cartItems, sortType]);
+  const handleDelete = (productId) => {
+    removeFromCart(productId);
   };
 
   return (
@@ -88,7 +96,7 @@ const DashBoard = () => {
               ) : (
                 <div className="mt-12 space-y-10 ">
                   {cartItems &&
-                    sortCart.map((item) => (
+                    sortedItems.map((item) => (
                       <div
                         key={item.product_id}
                         className="border-2 w-[1100px] rounded-xl flex items-start gap-6 p-10 justify-between"
@@ -108,7 +116,7 @@ const DashBoard = () => {
                             Price: ${item.price}
                           </p>
                         </div>
-                        <button>
+                        <button onClick={() => handleDelete(item.product_id)}>
                           <MdDeleteForever className="text-3xl mt-12 ml-48"></MdDeleteForever>
                         </button>
                       </div>

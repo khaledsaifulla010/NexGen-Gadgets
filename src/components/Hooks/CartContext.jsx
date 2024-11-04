@@ -24,13 +24,18 @@ export const CartProvider = ({ children }) => {
         );
       } else {
         toast.success("Product Added To Cart!");
-        return [...prevItems, { ...product }];
       }
+      return [...prevItems, { ...product }];
     });
+  };
+  const removeFromCart = (productId) => {
+    setCartItems((prevItems) =>
+      prevItems.filter((item) => item.product_id !== productId)
+    );
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
       <ToastContainer position="top-center" autoClose={2000}></ToastContainer>
       {children}
     </CartContext.Provider>
