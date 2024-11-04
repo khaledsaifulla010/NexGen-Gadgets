@@ -51,17 +51,19 @@ const DashBoard = () => {
             <div className="mb-36">
               <div className="flex items-center justify-between mb-36 mt-12">
                 <h1 className="text-3xl font-bold  ">Cart</h1>
-                <h1 className="text-3xl font-bold flex items-center">
-                  Total Price : <FaDollarSign className="mt-1"></FaDollarSign>
-                  {totalPrice}
-                </h1>
-                <button className="border-2 p-2 text-purple-500 font-black rounded-full text-lg border-purple-500 flex items-center gap-2">
-                  Sort By Price{" "}
-                  <FaSortAmountDown className="mt-1"></FaSortAmountDown>
-                </button>
-                <button className="border-2 p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-black rounded-full text-lg text-white">
-                  Purchase
-                </button>
+                <div className="flex items-center gap-8">
+                  <h1 className="text-3xl font-bold flex items-center">
+                    Total Price : <FaDollarSign className="mt-1"></FaDollarSign>
+                    {totalPrice}
+                  </h1>
+                  <button className="border-2 p-2 text-purple-500 font-black rounded-full text-lg border-purple-500 flex items-center gap-2">
+                    Sort By Price{" "}
+                    <FaSortAmountDown className="mt-1"></FaSortAmountDown>
+                  </button>
+                  <button className="border-2 p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-black rounded-full text-lg text-white">
+                    Purchase
+                  </button>
+                </div>
               </div>
               {cartItems.length === 0 ? (
                 <h1 className="mt-24 text-center font-black text-5xl">
