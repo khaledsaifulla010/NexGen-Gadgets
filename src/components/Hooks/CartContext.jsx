@@ -1,5 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
 
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const CartContext = createContext();
 
 export const useCart = () => {
@@ -15,19 +18,20 @@ export const CartProvider = ({ children }) => {
         (item) => item.product_id === product.product_id
       );
       if (existingItem) {
-        // Optionally update the quantity if the item is already in the cart
+        toast.warn("Product Already Added In Cart!");
         return prevItems.map((item) =>
-          item.product_id === product.product_id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
+          item.product_id === product.product_id ? { ...item } : item
         );
+      } else {
+        toast.success("Product Added To Cart!");
+        return [...prevItems, { ...product }];
       }
-      return [...prevItems, { ...product, quantity: 1 }];
     });
   };
 
   return (
     <CartContext.Provider value={{ cartItems, addToCart }}>
+      <ToastContainer position="top-center" autoClose={2000}></ToastContainer>
       {children}
     </CartContext.Provider>
   );
