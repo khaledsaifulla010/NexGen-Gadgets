@@ -34,8 +34,14 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+   const clearCart = () => {
+     setCartItems([]); 
+   };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cartItems, addToCart, removeFromCart, clearCart }}
+    >
       <ToastContainer position="top-center" autoClose={2000}></ToastContainer>
       {children}
     </CartContext.Provider>

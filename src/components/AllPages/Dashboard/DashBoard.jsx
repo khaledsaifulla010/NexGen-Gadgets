@@ -4,14 +4,21 @@ import "react-tabs/style/react-tabs.css";
 import { MdDeleteForever } from "react-icons/md";
 import { FaDollarSign, FaSortAmountDown } from "react-icons/fa";
 import { useEffect, useState } from "react";
-const DashBoard = () => {
-  const { cartItems, removeFromCart } = useCart();
+import group from "../../../assets/Group.png";
 
+const DashBoard = () => {
+  const { cartItems, removeFromCart, clearCart } = useCart();
+  const [payment, setPayment] = useState(0);
   const totalPrice = cartItems
     .map((item) => item.price)
     .reduce((sum, price) => sum + price, 0)
     .toFixed(2);
   console.log(totalPrice);
+
+  const handlePayment = () => {
+    setPayment(0);
+    clearCart();
+  };
 
   const [sortType, setSortType] = useState("default");
   const [sortedItems, setSortedItems] = useState([...cartItems]);
@@ -84,9 +91,42 @@ const DashBoard = () => {
                     Sort By Price
                     <FaSortAmountDown className="mt-1"></FaSortAmountDown>
                   </button>
-                  <button className="border-2 p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-black rounded-full text-lg text-white">
+
+                  <button
+                    className="border-2 p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-black rounded-full text-lg text-white"
+                    onClick={() =>
+                      document.getElementById("my_modal_1").showModal()
+                    }
+                  >
                     Purchase
                   </button>
+                  <dialog id="my_modal_1" className="modal">
+                    <div className="modal-box">
+                      <img className="ml-[200px]" src={group} />
+                      <h1 className="mt-4 text-center text-3xl font-bold">
+                        Payment Successfully
+                      </h1>
+                      <div className="divider"></div>
+                      <p className="text-center font-semibold text-lg">
+                        Thanks For Purchasing.
+                      </p>
+                      <p className="text-xl font-bold ml-[130px] flex items-center mt-2">
+                        Total Price :
+                        <FaDollarSign className="mt-1"></FaDollarSign>
+                        {totalPrice}
+                      </p>
+                      <div>
+                        <form method="dialog">
+                          <button
+                            onClick={handlePayment}
+                            className="border-2 p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-black rounded-full text-lg text-white w-full mt-6"
+                          >
+                            Close
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
                 </div>
               </div>
               {cartItems.length === 0 ? (
