@@ -2,8 +2,8 @@ import banner from "../../../assets/banner.jpg";
 
 const Banner = () => {
   return (
-    <div className="absolute w-full -top-24 -z-10 -ml-28">
-      <div className="bg-purple-500 h-[900px] ">
+    <div className="absolute bg-purple-500 w-full -top-24 -z-10 -ml-28 h-[1200px]">
+      <div className=" ">
         <h1 className="p-8 text-center text-6xl font-black text-white absolute mt-64 ml-36">
           Upgrade Your Tech Accessorize with <br /> NextGen Gadget Accessories
         </h1>

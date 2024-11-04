@@ -1,0 +1,194 @@
+[
+  {
+    "product_id": 1,
+    "product_title": "UltraBook Pro",
+    "product_image": "https://i.ibb.co.com/SKWLY1b/ultrabook-Pro.webp",
+    "category": "Laptops",
+    "price": 1299.99,
+    "description": "A lightweight laptop with powerful performance and a sleek design.",
+    "specification": [
+      "Intel Core i7 processor",
+      "16GB RAM",
+      "512GB SSD",
+      "13.3-inch Full HD display"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 2,
+    "product_title": "Galaxy Phone X",
+    "product_image": "https://i.ibb.co.com/qBjHnBf/Galaxy-Phone-X.webp",
+    "category": "Phones",
+    "price": 899.99,
+    "description": "A high-end smartphone with advanced camera features and a stunning display.",
+    "specification": [
+      "Snapdragon 888 processor",
+      "8GB RAM",
+      "128GB storage",
+      "6.5-inch AMOLED display"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 3,
+    "product_title": "Noise Cancelling Headphones",
+    "product_image": "https://i.ibb.co.com/r5787mW/Noise-Cancelling-Headphones.jpg",
+    "category": "Accessories",
+    "price": 249.99,
+    "description": "Wireless headphones with active noise cancellation and long battery life.",
+    "specification": [
+      "Bluetooth 5.0",
+      "30 hours playtime",
+      "Quick charge",
+      "Over-ear design"
+    ],
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "product_id": 4,
+    "product_title": "Smartwatch X20",
+    "product_image": "https://i.ibb.co.com/chZ6Svk/Smartwatch-X20.webp",
+    "category": "Smartwatch",
+    "price": 199.99,
+    "description": "A feature-rich smartwatch with fitness tracking and customizable watch faces.",
+    "specification": [
+      "Heart rate monitoring",
+      "GPS tracking",
+      "Water-resistant",
+      "7-day battery life"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 5,
+    "product_title": "Gaming Laptop G15",
+    "product_image": "https://i.ibb.co.com/cXGrSZj/Gaming-Laptop-G15.jpg",
+    "category": "Laptops",
+    "price": 1499.99,
+    "description": "A high-performance gaming laptop with immersive graphics and fast processing.",
+    "specification": [
+      "AMD Ryzen 9 processor",
+      "16GB RAM",
+      "1TB SSD",
+      "15.6-inch 144Hz display"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": 6,
+    "product_title": "iPhone 13 Pro",
+    "product_image": "https://i.ibb.co.com/kJnsS17/i-Phone-13-Pro.webp",
+    "category": "Phones",
+    "price": 999.99,
+    "description": "Apple's latest smartphone with advanced camera and performance capabilities.",
+    "specification": [
+      "A15 Bionic chip",
+      "6GB RAM",
+      "256GB storage",
+      "6.1-inch OLED display"
+    ],
+    "availability": false,
+    "rating": 4.8
+  },
+  {
+    "product_id": 7,
+    "product_title": "Wireless Earbuds",
+    "product_image": "https://i.ibb.co.com/TPFnJbK/Wireless-Earbuds.webp",
+    "category": "Accessories",
+    "price": 149.99,
+    "description": "Compact wireless earbuds with excellent sound quality and noise isolation.",
+    "specification": [
+      "Bluetooth 5.1",
+      "24 hours playtime with case",
+      "IPX4 water-resistant",
+      "Touch control"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": 8,
+    "product_title": "Classic Smartwatch",
+    "product_image": "https://i.ibb.co.com/H4Bcc8P/Classic-Smartwatch.webp",
+    "category": "Smartwatch",
+    "price": 159.99,
+    "description": "A stylish smartwatch with essential features and customizable watch faces.",
+    "specification": [
+      "Heart rate and sleep tracking",
+      "Water-resistant",
+      "5-day battery life",
+      "1.3-inch LCD display"
+    ],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "product_id": 9,
+    "product_title": "Convertible Laptop C14",
+    "product_image": "https://i.ibb.co.com/bHSHhjc/Convertible-Laptop-C14.webp",
+    "category": "Laptops",
+    "price": 1099.99,
+    "description": "A 2-in-1 convertible laptop with touch screen and flexible usage modes.",
+    "specification": [
+      "Intel Core i5 processor",
+      "8GB RAM",
+      "256GB SSD",
+      "14-inch touchscreen display"
+    ],
+    "availability": false,
+    "rating": 4.6
+  },
+  {
+    "product_id": 10,
+    "product_title": "Pixel Phone 5",
+    "product_image": "https://i.ibb.co.com/TLfpkPQ/Pixel-Phone-5.webp",
+    "category": "Phones",
+    "price": 749.99,
+    "description": "Google's latest phone with excellent camera quality and pure Android experience.",
+    "specification": [
+      "Snapdragon 765G processor",
+      "8GB RAM",
+      "128GB storage",
+      "6-inch OLED display"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 11,
+    "product_title": "Portable Charger",
+    "product_image": "https://i.ibb.co.com/JrWVdY7/Portable-Charger.webp",
+    "category": "Accessories",
+    "price": 39.99,
+    "description": "A compact and fast-charging portable power bank for charging devices on the go.",
+    "specification": [
+      "10000mAh capacity",
+      "USB-C and USB-A ports",
+      "Fast charging support",
+      "Compact design"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 12,
+    "product_title": "Fitness Tracker",
+    "product_image": "https://i.ibb.co.com/QctDt6Z/Fitness-Tracker.webp",
+    "category": "Smartwatch",
+    "price": 89.99,
+    "description": "A fitness tracker with activity monitoring, heart rate, and sleep tracking.",
+    "specification": [
+      "Step and calorie tracking",
+      "Sleep monitoring",
+      "Water-resistant",
+      "5-day battery life"
+    ],
+    "availability": false,
+    "rating": 4.2
+  }
+]
