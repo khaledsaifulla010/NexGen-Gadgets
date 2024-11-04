@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AllProductsCard from "../../AllProductsCard/AllProductsCard";
 
 const AllProducts = () => {
@@ -19,7 +18,6 @@ const AllProducts = () => {
         setAllProducts(res);
         setAllLaptops(res.filter((product) => product.category === "Laptops"));
         setAllPhones(res.filter((product) => product.category === "Phones"));
-
         setAllAccessories(
           res.filter((product) => product.category === "Accessories")
         );
@@ -33,26 +31,34 @@ const AllProducts = () => {
   const handleAllProducts = () => {
     setShowProducts("all");
   };
-
   const handleAllLaptops = () => {
     setShowProducts("Laptops");
   };
-
   const handleAllPhones = () => {
     setShowProducts("Phones");
   };
-
   const handleAllAccessories = () => {
     setShowProducts("Accessories");
   };
-
   const handleAllSmartwatches = () => {
     setShowProducts("Smartwatches");
   };
-
   const handleAllMacbooks = () => {
     setShowProducts("Macbooks");
   };
+
+  const displayedProducts =
+    showProducts === "all"
+      ? allProducts
+      : showProducts === "Laptops"
+      ? allLaptops
+      : showProducts === "Phones"
+      ? allPhones
+      : showProducts === "Accessories"
+      ? allAccessories
+      : showProducts === "Smartwatches"
+      ? allSmartwatches
+      : allMacbooks;
 
   return (
     <div>
@@ -64,58 +70,53 @@ const AllProducts = () => {
         <div className="border-2 w-[200px] h-[450px] p-2 ">
           <button
             onClick={handleAllProducts}
-            className=" w-full p-2 rounded-xl bg-slate-100 font-black mt-4 "
+            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-4"
           >
-            AllProducts
+            All Products
           </button>
           <button
             onClick={handleAllLaptops}
-            className="w-full  p-2 rounded-xl bg-slate-100 font-black mt-8 "
+            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-8"
           >
             Laptops
           </button>
           <button
             onClick={handleAllPhones}
-            className="w-full  p-2 rounded-xl bg-slate-100 font-black mt-8 "
+            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-8"
           >
             Phones
           </button>
           <button
             onClick={handleAllAccessories}
-            className="w-full  p-2 rounded-xl bg-slate-100 font-black mt-8 "
+            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-8"
           >
             Accessories
           </button>
           <button
             onClick={handleAllSmartwatches}
-            className="w-full  p-2 rounded-xl bg-slate-100 font-black mt-8 "
+            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-8"
           >
             Smartwatch
           </button>
           <button
             onClick={handleAllMacbooks}
-            className="w-full  p-2 rounded-xl bg-slate-100 font-black mt-8 "
+            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-8"
           >
             Macbooks
           </button>
         </div>
 
-        <div className=" w-[1100px] h-full">
+        <div className="w-[1100px] h-full">
           <div className="grid grid-cols-3 gap-8">
-            {(showProducts === "all"
-              ? allProducts
-              : showProducts === "Laptops"
-              ? allLaptops
-              : showProducts === "Phones"
-              ? allPhones
-              : showProducts === "Accessories"
-              ? allAccessories
-              : showProducts === "Smartwatches"
-              ? allSmartwatches
-              : allMacbooks
-            ).map((product) => (
-              <AllProductsCard product={product} key={product.product_id} />
-            ))}
+            {displayedProducts.length > 0 ? (
+              displayedProducts.map((product) => (
+                <AllProductsCard product={product} key={product.product_id} />
+              ))
+            ) : (
+              <p className="text-center text-3xl font-bold mt-12">
+                No Data Available
+              </p>
+            )}
           </div>
         </div>
       </div>
