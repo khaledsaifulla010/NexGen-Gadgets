@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import AllProductsCard from "../../AllProductsCard/AllProductsCard";
+import AllProductsCard from "../AllProductsCard/AllProductsCard";
 
 const AllProducts = () => {
   const [showProducts, setShowProducts] = useState("all");
@@ -110,10 +110,13 @@ const AllProducts = () => {
           <div className="grid grid-cols-3 gap-8">
             {displayedProducts.length > 0 ? (
               displayedProducts.map((product) => (
-                <AllProductsCard product={product} key={product.product_id} />
+                <AllProductsCard
+                  product={product}
+                  key={product.product_id}
+                ></AllProductsCard>
               ))
             ) : (
-              <p className="text-center text-3xl font-bold mt-12">
+              <p className="text-center text-3xl font-bold">
                 No Data Available
               </p>
             )}

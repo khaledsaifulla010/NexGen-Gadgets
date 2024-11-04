@@ -8,6 +8,7 @@ import Home from "./components/AllPages/Home/Home.jsx";
 import Dashboard from "./components/AllPages/Dashboard/DashBoard.jsx";
 import Statistics from "./components/AllPages/Statistics/Statistics.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
+import ProductDetails from "./components/AllPages/ProductDetails/ProductDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
+      },
+      {
+        path: "product/:product_id",
+        element: <ProductDetails></ProductDetails>,
+        loader:()=>fetch('/products.json')
       },
     ],
   },
