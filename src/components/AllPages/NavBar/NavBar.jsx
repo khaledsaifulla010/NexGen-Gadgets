@@ -24,13 +24,20 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="dropdown  dropdown-end">
-          <div tabIndex={0} role="button" className="text-2xl ">
+          <div
+            tabIndex={0}
+            role="button"
+            className="text-2xl text-orange-600 flex"
+          >
             <FaShoppingCart></FaShoppingCart>
+            <div className="badge -mt-2 absolute ml-3 font-black">+99</div>
           </div>
           <ul
             tabIndex={0}
             className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 border-2 shadow"
-          ></ul>
+          >
+            <h1>Work Soon!</h1>
+          </ul>
         </div>
       </div>
     </div>
