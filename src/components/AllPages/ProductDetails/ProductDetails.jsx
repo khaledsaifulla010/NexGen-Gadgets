@@ -26,8 +26,8 @@ const ProductDetails = () => {
   return (
     <div>
       <div className="mb-36">
-        <div className="hero w-[1300px] bg-purple-500 mt-12 rounded-xl h-[400px]">
-          <div className="">
+        <div className="hero w-[1300px] bg-purple-500 mt-12 rounded-xl h-[400px] ">
+          <div>
             <div className>
               <h1 className="text-3xl text-white font-bold text-center -mt-28">
                 Product Details
@@ -40,7 +40,7 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-        <div className="  h-[550px] border-2 w-[1150px] rounded-xl mt-12">
+        <div className="  h-[600px] bg-white border-[25px] border-slate-50 w-[1150px] rounded-xl mt-12 relative -top-52 ml-16 ">
           <div className="flex items-start  mt-6  gap-4 ml-6">
             <img className="border-2 rounded-xl" src={product_image} />
             <div>
@@ -110,7 +110,6 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-        <div></div>
       </div>
     </div>
   );
