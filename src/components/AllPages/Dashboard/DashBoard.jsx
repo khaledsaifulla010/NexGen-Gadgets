@@ -2,9 +2,15 @@ import { useCart } from "../../Hooks/CartContext";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { MdDeleteForever } from "react-icons/md";
-
+import { FaDollarSign, FaSortAmountDown } from "react-icons/fa";
 const DashBoard = () => {
   const { cartItems } = useCart();
+
+  const totalPrice = cartItems
+    .map((item) => item.price)
+    .reduce((sum, price) => sum + price, 0)
+    .toFixed(2);
+  console.log(totalPrice);
 
   return (
     <div>
@@ -32,7 +38,9 @@ const DashBoard = () => {
             }
           >
             <Tab className={"w-36 border-2 rounded-full text-center"}>
-              <div className="border-2 rounded-full p-1 ">Cart</div>
+              <div>
+                <div className="border-2 rounded-full p-1 ">Cart</div>
+              </div>
             </Tab>
             <Tab className={"w-36 text-center border-2 rounded-full"}>
               <div className="border-2 rounded-full p-1 ">Wish List</div>
@@ -41,7 +49,20 @@ const DashBoard = () => {
 
           <TabPanel>
             <div className="mb-36">
-              <h1 className="text-3xl font-bold mt-8 mb-">Cart</h1>
+              <div className="flex items-center justify-between mb-36 mt-12">
+                <h1 className="text-3xl font-bold  ">Cart</h1>
+                <h1 className="text-3xl font-bold flex items-center">
+                  Total Price : <FaDollarSign className="mt-1"></FaDollarSign>
+                  {totalPrice}
+                </h1>
+                <button className="border-2 p-2 text-purple-500 font-black rounded-full text-lg border-purple-500 flex items-center gap-2">
+                  Sort By Price{" "}
+                  <FaSortAmountDown className="mt-1"></FaSortAmountDown>
+                </button>
+                <button className="border-2 p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-black rounded-full text-lg text-white">
+                  Purchase
+                </button>
+              </div>
               {cartItems.length === 0 ? (
                 <h1 className="mt-24 text-center font-black text-5xl">
                   Your cart is empty!
