@@ -1,9 +1,18 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import "./NavBar.css";
-import { FaShoppingCart, FaHeart } from "react-icons/fa";
+import { FaShoppingCart, FaHeart, FaDollarSign } from "react-icons/fa";
+import { useCart } from "../../Hooks/CartContext";
 
 const NavBar = () => {
+  const { cartItems } = useCart();
+
+  const totalPrice = cartItems
+    .map((item) => item.price)
+    .reduce((sum, price) => sum + price, 0)
+    .toFixed(2);
+  console.log(totalPrice);
+
   return (
     <div>
       <div className="navbar flex items-center justify-between ">
@@ -26,13 +35,25 @@ const NavBar = () => {
         <div className="dropdown  dropdown-end">
           <div tabIndex={0} role="button" className="text-2xl  flex mr-24">
             <FaShoppingCart></FaShoppingCart>
-            <div className="badge -mt-2 ml-3 absolute font-black">+99</div>
+            <div className="badge -mt-2 ml-3 absolute font-black">
+              {cartItems.length}
+            </div>
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 border-2 shadow"
+            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-72 p-2 border-2 shadow"
           >
-            <h1>Work Soon!</h1>
+            <h1 className="text-xl font-bold mt-2 text-center">
+              {cartItems.length} Items in Cart
+            </h1>
+            <div className="divider"></div>
+            <h1 className="text-xl font-bold -mt-2 justify-center flex items-center text-purple-500">
+              Total Price : <FaDollarSign className="mt-1"></FaDollarSign>{" "}
+              {totalPrice}
+            </h1>
+            <button className="border-2 p-2 bg-purple-500 font-black rounded-full text-lg text-white mt-4">
+              Dashboard
+            </button>
           </ul>
         </div>
         <FaHeart className="text-2xl  flex absolute right-12 mr-24"></FaHeart>
