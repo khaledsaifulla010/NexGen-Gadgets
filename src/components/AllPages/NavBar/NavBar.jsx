@@ -1,11 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import "./NavBar.css";
+import { FaShoppingCart } from "react-icons/fa";
 
 const NavBar = () => {
   return (
     <div>
-      <div className="navbar flex items-center justify-between">
+      <div className="navbar flex items-center justify-between ">
         <div className="">
           <Link to={"/"} className="flex items-center gap-2">
             <img className="w-8 mt-1" src={logo} />
@@ -14,13 +15,22 @@ const NavBar = () => {
             </a>
           </Link>
         </div>
-        <div className="navbar-center ">
-          <ul className="menu menu-horizontal px-1 gap-16  font-semibold text-lg">
+        <div>
+          <ul className="menu menu-horizontal px-1 gap-16 navbar-center  mr-36 font-semibold text-lg">
             <NavLink to={"/"}>Home</NavLink>
             <NavLink to={"/statistics"}>Statistics</NavLink>
             <NavLink to={"dashboard"}>Dashboard</NavLink>
             {/* <NavLink>Soon</NavLink> */}
           </ul>
+        </div>
+        <div className="dropdown  dropdown-end">
+          <div tabIndex={0} role="button" className="text-2xl ">
+            <FaShoppingCart></FaShoppingCart>
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 border-2 shadow"
+          ></ul>
         </div>
       </div>
     </div>
