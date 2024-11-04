@@ -9,6 +9,8 @@ import Dashboard from "./components/AllPages/Dashboard/DashBoard.jsx";
 import Statistics from "./components/AllPages/Statistics/Statistics.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 import ProductDetails from "./components/AllPages/ProductDetails/ProductDetails.jsx";
+import { CartProvider } from "./components/Hooks/CartContext.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>
 );

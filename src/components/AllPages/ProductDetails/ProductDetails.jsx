@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
+import { useCart } from "../../Hooks/CartContext";
 const ProductDetails = () => {
   const allProducts = useLoaderData();
   // console.log(allProducts);
@@ -22,6 +23,13 @@ const ProductDetails = () => {
     specification,
     rating,
   } = product;
+
+
+  const {addToCart} = useCart()
+
+  const handleAddToCart = () => {
+    addToCart(product);
+  };
 
   return (
     <div>
@@ -100,7 +108,7 @@ const ProductDetails = () => {
                 </div>
               </div>
               <div className="mt-4 flex items-center gap-4">
-                <button className="flex items-center gap-2 text-lg border-2 p-2 rounded-full bg-purple-500 font-black text-white">
+                <button onClick={handleAddToCart} className="flex items-center gap-2 text-lg border-2 p-2 rounded-full bg-purple-500 font-black text-white">
                   Add To Cart <FaShoppingCart></FaShoppingCart>
                 </button>
                 <button className="text-lg">
