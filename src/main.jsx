@@ -10,6 +10,7 @@ import Statistics from "./components/AllPages/Statistics/Statistics.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 import ProductDetails from "./components/AllPages/ProductDetails/ProductDetails.jsx";
 import { CartProvider } from "./components/Hooks/CartContext.jsx";
+import LoginForm from "./components/Authenticaton/LoginForm/LoginForm.jsx";
 
 
 const router = createBrowserRouter([
@@ -34,7 +35,10 @@ const router = createBrowserRouter([
         path: "product/:product_id",
         element: <ProductDetails></ProductDetails>,
         loader:()=>fetch('/products.json')
-      },
+      },{
+        path:'/login-signUp',
+        element:<LoginForm></LoginForm>
+      }
     ],
   },
 ]);

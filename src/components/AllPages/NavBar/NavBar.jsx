@@ -35,7 +35,7 @@ const NavBar = () => {
           </Link>
         </div>
         <div>
-          <ul className="menu menu-horizontal px-1 gap-16 navbar-center  mr-36 font-semibold text-lg">
+          <ul className="menu menu-horizontal px-1 gap-16 navbar-center mt-4  mr-36 font-semibold text-lg">
             <NavLink
               to={"/"}
               className={({ isActive }) =>
@@ -60,11 +60,18 @@ const NavBar = () => {
             >
               Dashboard
             </NavLink>
-            {/* <NavLink>Soon</NavLink> */}
+            <NavLink
+              to={"/login-signUp"}
+              className={({ isActive }) =>
+                isActive ? "text-black underline" : "text-black"
+              }
+            >
+              Login/SignUp
+            </NavLink>
           </ul>
         </div>
         <div className="dropdown  dropdown-end">
-          <div tabIndex={0} role="button" className="text-2xl  flex mr-24">
+          <div tabIndex={0} role="button" className="text-2xl  flex mr-24 mt-4">
             <FaShoppingCart></FaShoppingCart>
             <div className="badge -mt-2 ml-3 absolute font-black">
               {cartItems.length}
@@ -89,8 +96,8 @@ const NavBar = () => {
             </Link>
           </ul>
         </div>
-        <FaHeart className="text-2xl  flex absolute right-12 mr-36"></FaHeart>
-        <div className="badge -mt-5 right-[172px]  absolute font-black">
+        <FaHeart className="text-2xl  flex absolute right-12 mr-36 mt-4"></FaHeart>
+        <div className="badge  right-[172px]  absolute font-black ">
           {wishListItems.length}
         </div>
       </div>
