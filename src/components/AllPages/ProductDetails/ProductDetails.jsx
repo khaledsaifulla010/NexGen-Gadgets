@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
-import { useCart } from "../../Hooks/CartContext";
+import { useCart, useWishList } from "../../Hooks/CartContext";
 const ProductDetails = () => {
   const allProducts = useLoaderData();
   // console.log(allProducts);
@@ -24,11 +24,15 @@ const ProductDetails = () => {
     rating,
   } = product;
 
-
-  const {addToCart} = useCart()
+  const { addToCart } = useCart();
+  const { addToWishList } = useWishList();
 
   const handleAddToCart = () => {
     addToCart(product);
+  };
+
+  const handleAddToWishList = () => {
+    addToWishList(product);
   };
 
   return (
@@ -108,10 +112,13 @@ const ProductDetails = () => {
                 </div>
               </div>
               <div className="mt-4 flex items-center gap-4">
-                <button onClick={handleAddToCart} className="flex items-center gap-2 text-lg border-2 p-2 rounded-full bg-purple-500 font-black text-white">
+                <button
+                  onClick={handleAddToCart}
+                  className="flex items-center gap-2 text-lg border-2 p-2 rounded-full bg-purple-500 font-black text-white"
+                >
                   Add To Cart <FaShoppingCart></FaShoppingCart>
                 </button>
-                <button className="text-lg">
+                <button onClick={handleAddToWishList} className="text-lg">
                   <FaHeart></FaHeart>
                 </button>
               </div>

@@ -2,10 +2,11 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import "./NavBar.css";
 import { FaShoppingCart, FaHeart, FaDollarSign } from "react-icons/fa";
-import { useCart } from "../../Hooks/CartContext";
+import { useCart, useWishList } from "../../Hooks/CartContext";
 
 const NavBar = () => {
   const { cartItems } = useCart();
+  const { wishListItems } = useWishList();
 
   const totalPrice = cartItems
     .map((item) => item.price)
@@ -57,7 +58,9 @@ const NavBar = () => {
           </ul>
         </div>
         <FaHeart className="text-2xl  flex absolute right-12 mr-24"></FaHeart>
-        <div className="badge -mt-5 right-28  absolute font-black">+99</div>
+        <div className="badge -mt-5 right-28  absolute font-black">
+          {wishListItems.length}
+        </div>
       </div>
     </div>
   );
