@@ -1,4 +1,4 @@
-import { useCart } from "../../Hooks/CartContext";
+import { useCart, useWishList } from "../../Hooks/CartContext";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { MdDeleteForever } from "react-icons/md";
@@ -8,6 +8,9 @@ import group from "../../../assets/Group.png";
 
 const DashBoard = () => {
   const { cartItems, removeFromCart, clearCart } = useCart();
+
+  const { wishListItems, removeFromWishList } = useWishList();
+
   const [payment, setPayment] = useState(0);
   const totalPrice = cartItems
     .map((item) => item.price)
@@ -36,8 +39,13 @@ const DashBoard = () => {
     });
     setSortedItems(sorted);
   }, [cartItems, sortType]);
+
   const handleDelete = (productId) => {
     removeFromCart(productId);
+  };
+
+  const handleDeleteFromWishList = (productId) => {
+    removeFromWishList(productId);
   };
 
   return (
@@ -74,6 +82,8 @@ const DashBoard = () => {
               <div className="border-2 rounded-full p-1 ">Wish List</div>
             </Tab>
           </TabList>
+
+          {/* Add To Cart */}
 
           <TabPanel>
             <div className="mb-36">
@@ -131,7 +141,7 @@ const DashBoard = () => {
               </div>
               {cartItems.length === 0 ? (
                 <h1 className="mt-24 text-center font-black text-5xl">
-                  Your cart is empty!
+                  Your Cart is Empty!
                 </h1>
               ) : (
                 <div className="mt-12 space-y-10 ">
@@ -165,8 +175,51 @@ const DashBoard = () => {
               )}
             </div>
           </TabPanel>
+
+          {/* Wish List */}
           <TabPanel>
-            <h2>Any content 2</h2>
+            <div className="mb-36">
+              <div>
+                <h1 className="text-3xl font-bold  ">WishList</h1>
+              </div>
+              {wishListItems.length === 0 ? (
+                <h1 className="mt-24 text-center font-black text-5xl">
+                  Your WishList is Empty!
+                </h1>
+              ) : (
+                <div className="mt-12 space-y-10 ">
+                  {wishListItems.map((item) => (
+                    <div
+                      key={item.product_id}
+                      className="border-2 w-[1100px] rounded-xl flex items-start gap-6 p-10 justify-between"
+                    >
+                      <img
+                        className="w-[150px] h-[150px] border-2 rounded-lg"
+                        src={item.product_image}
+                      />
+                      <div className="space-y-4">
+                        <h2 className="text-2xl font-black">
+                          {item.product_title}
+                        </h2>
+                        <p className="text-lg font-bold text-slate-500">
+                          {item.description}
+                        </p>
+                        <p className="text-xl font-bold text-slate-600">
+                          Price: ${item.price}
+                        </p>
+                      </div>
+                      <button
+                        onClick={() =>
+                          handleDeleteFromWishList(item.product_id)
+                        }
+                      >
+                        <MdDeleteForever className="text-3xl mt-12 ml-48"></MdDeleteForever>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </TabPanel>
         </Tabs>
       </div>
