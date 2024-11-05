@@ -1,13 +1,5 @@
-import React from "react";
-import {
-  BarChart,
-  Bar,
-  Cell,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Legend,
-} from "recharts";
+import { Helmet } from "react-helmet";
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 import { useCart } from "../../Hooks/CartContext";
 
 const Statistics = () => {
@@ -47,6 +39,9 @@ const Statistics = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>NextGen Gadgets || Statistics</title>
+      </Helmet>
       <div className="hero w-[1300px] bg-purple-500 mt-12 mb-24 rounded-xl h-[200px] ">
         <div>
           <div>

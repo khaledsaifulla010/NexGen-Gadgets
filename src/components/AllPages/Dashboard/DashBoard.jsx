@@ -6,6 +6,8 @@ import { FaDollarSign, FaSortAmountDown } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import group from "../../../assets/Group.png";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 
 const DashBoard = () => {
   const { cartItems, removeFromCart, clearCart } = useCart();
@@ -57,6 +59,9 @@ const DashBoard = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>NextGen Gadgets || Dashboard</title>
+      </Helmet>
       <div>
         <div className="hero w-[1300px] bg-purple-500 mt-12 rounded-xl h-[400px] ">
           <div>

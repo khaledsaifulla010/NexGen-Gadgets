@@ -1,8 +1,7 @@
 import { FcGoogle } from "react-icons/fc";
-
 import AuthJS from "../AuthJS/AuthJS";
 import "../AuthStyles/AuthStyles.css";
-
+import { Helmet } from "react-helmet";
 import {
   FaGithub,
   FaFacebook,
@@ -13,6 +12,9 @@ import {
 const LoginForm = () => {
   return (
     <div>
+      <Helmet>
+        <title>NextGen Gadgets || Login/SignUp</title>
+      </Helmet>
       <div className="hero w-[1300px] bg-purple-500 mt-12 mb-24 rounded-xl h-[200px] ">
         <div>
           <div>
