@@ -11,7 +11,20 @@ import {
 import { useCart } from "../../Hooks/CartContext";
 
 const Statistics = () => {
-  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
+  const colors = [
+    "purple",
+    "pink",
+    "crimson",
+    "lime",
+    "Indigo",
+    "Coral",
+    "Teal",
+    "gold",
+    "violet",
+    "Maroon",
+    "Olive",
+    "Turquoise",
+  ];
 
   const { cartItems } = useCart();
 
@@ -51,15 +64,15 @@ const Statistics = () => {
       {/*  Bar Chart */}
       <div className="mb-36">
         {cartItems.length > 0 ? (
-          <div className="mb-36">
+          <div className="mb-36 ">
             <BarChart
-              width={1300}
+              width={1400}
               height={500}
               data={cartItems}
               margin={{
                 top: 20,
-                right: 30,
-                left: 20,
+                right: 70,
+                left: -60,
                 bottom: 5,
               }}
             >

@@ -4,7 +4,7 @@
     "product_title": "UltraBook Pro",
     "product_image": "https://i.ibb.co.com/SKWLY1b/ultrabook-Pro.webp",
     "category": "Laptops",
-    "price": 1299.99,
+    "price": 700.89,
     "description": "A lightweight laptop with powerful performance and a sleek design.",
     "specification": [
       "Intel Core i7 processor",
@@ -20,7 +20,7 @@
     "product_title": "Galaxy Phone X",
     "product_image": "https://i.ibb.co.com/qBjHnBf/Galaxy-Phone-X.webp",
     "category": "Phones",
-    "price": 899.99,
+    "price": 899.92,
     "description": "A high-end smartphone with advanced camera features and a stunning display.",
     "specification": [
       "Snapdragon 888 processor",
@@ -36,7 +36,7 @@
     "product_title": "Headphones",
     "product_image": "https://i.ibb.co.com/r5787mW/Noise-Cancelling-Headphones.jpg",
     "category": "Accessories",
-    "price": 249.99,
+    "price": 349.54,
     "description": "Wireless headphones with active noise cancellation and long battery life.",
     "specification": [
       "Bluetooth 5.0",
@@ -52,7 +52,7 @@
     "product_title": "Smartwatch X20",
     "product_image": "https://i.ibb.co.com/chZ6Svk/Smartwatch-X20.webp",
     "category": "Smartwatch",
-    "price": 199.99,
+    "price": 699.39,
     "description": "A feature-rich smartwatch with fitness tracking and customizable watch faces.",
     "specification": [
       "Heart rate monitoring",
@@ -68,7 +68,7 @@
     "product_title": "Gaming Laptop G15",
     "product_image": "https://i.ibb.co.com/cXGrSZj/Gaming-Laptop-G15.jpg",
     "category": "Laptops",
-    "price": 1499.99,
+    "price": 999.0,
     "description": "A high-performance gaming laptop with immersive graphics and fast processing.",
     "specification": [
       "AMD Ryzen 9 processor",
@@ -84,7 +84,7 @@
     "product_title": "iPhone 13 Pro",
     "product_image": "https://i.ibb.co.com/kJnsS17/i-Phone-13-Pro.webp",
     "category": "Phones",
-    "price": 999.99,
+    "price": 445.3,
     "description": "Apple's latest smartphone with advanced camera and performance capabilities.",
     "specification": [
       "A15 Bionic chip",
@@ -100,7 +100,7 @@
     "product_title": "Wireless Earbuds",
     "product_image": "https://i.ibb.co.com/TPFnJbK/Wireless-Earbuds.webp",
     "category": "Accessories",
-    "price": 149.99,
+    "price": 600.29,
     "description": "Compact wireless earbuds with excellent sound quality and noise isolation.",
     "specification": [
       "Bluetooth 5.1",
@@ -116,7 +116,7 @@
     "product_title": "Classic Smartwatch",
     "product_image": "https://i.ibb.co.com/H4Bcc8P/Classic-Smartwatch.webp",
     "category": "Smartwatch",
-    "price": 159.99,
+    "price": 359.99,
     "description": "A stylish smartwatch with essential features and customizable watch faces.",
     "specification": [
       "Heart rate and sleep tracking",
@@ -132,7 +132,7 @@
     "product_title": "Convertible Laptop C14",
     "product_image": "https://i.ibb.co.com/bHSHhjc/Convertible-Laptop-C14.webp",
     "category": "Laptops",
-    "price": 1099.99,
+    "price": 1099.23,
     "description": "A 2-in-1 convertible laptop with touch screen and flexible usage modes.",
     "specification": [
       "Intel Core i5 processor",
@@ -148,7 +148,7 @@
     "product_title": "Pixel Phone 5",
     "product_image": "https://i.ibb.co.com/TLfpkPQ/Pixel-Phone-5.webp",
     "category": "Phones",
-    "price": 749.99,
+    "price": 437.99,
     "description": "Google's latest phone with excellent camera quality and pure Android experience.",
     "specification": [
       "Snapdragon 765G processor",
@@ -164,7 +164,7 @@
     "product_title": "Portable Charger",
     "product_image": "https://i.ibb.co.com/JrWVdY7/Portable-Charger.webp",
     "category": "Accessories",
-    "price": 59.99,
+    "price": 359.87,
     "description": "A compact and fast-charging portable power bank for charging devices on the go.",
     "specification": [
       "10000mAh capacity",
@@ -180,7 +180,7 @@
     "product_title": "Fitness Tracker",
     "product_image": "https://i.ibb.co.com/QctDt6Z/Fitness-Tracker.webp",
     "category": "Smartwatch",
-    "price": 89.99,
+    "price": 389.99,
     "description": "A fitness tracker with activity monitoring, heart rate, and sleep tracking.",
     "specification": [
       "Step and calorie tracking",
