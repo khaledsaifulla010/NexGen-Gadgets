@@ -67,7 +67,7 @@ const AllProducts = () => {
       </h1>
 
       <div className="mt-36 flex gap-12 mb-24">
-        <div className="border-2 w-[200px] h-[450px] p-2 ">
+        <div className="border-2 w-[200px] h-[450px] p-2 rounded-2xl">
           <button
             onClick={handleAllProducts}
             className={`w-full p-2 rounded-xl font-black mt-4 ${
