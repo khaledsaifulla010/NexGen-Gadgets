@@ -5,6 +5,7 @@ import { MdDeleteForever } from "react-icons/md";
 import { FaDollarSign, FaSortAmountDown } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import group from "../../../assets/Group.png";
+import { useNavigate } from "react-router-dom";
 
 const DashBoard = () => {
   const { cartItems, removeFromCart, clearCart } = useCart();
@@ -12,6 +13,14 @@ const DashBoard = () => {
   const { wishListItems, removeFromWishList } = useWishList();
 
   const [payment, setPayment] = useState(0);
+
+  const [sortType, setSortType] = useState("default");
+  const [sortedItems, setSortedItems] = useState([...cartItems]);
+
+  // For Navigate
+
+  const navigate = useNavigate();
+
   const totalPrice = cartItems
     .map((item) => item.price)
     .reduce((sum, price) => sum + price, 0)
@@ -21,10 +30,8 @@ const DashBoard = () => {
   const handlePayment = () => {
     setPayment(0);
     clearCart();
+    navigate("/");
   };
-
-  const [sortType, setSortType] = useState("default");
-  const [sortedItems, setSortedItems] = useState([...cartItems]);
 
   const handleSortByPrice = (type) => {
     setSortType(type);
