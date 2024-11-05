@@ -49,12 +49,14 @@ const NavBar = () => {
             </h1>
             <div className="divider"></div>
             <h1 className="text-xl font-bold -mt-2 justify-center flex items-center text-purple-500">
-              Total Price : <FaDollarSign className="mt-1"></FaDollarSign>{" "}
+              Total Price : <FaDollarSign className="mt-1"></FaDollarSign>
               {totalPrice}
             </h1>
-            <button className="border-2 p-2 bg-purple-500 font-black rounded-full text-lg text-white mt-4">
-              Dashboard
-            </button>
+            <Link to={"/dashboard"}>
+              <button className="border-2 p-2 bg-purple-500 font-black rounded-full text-lg text-white mt-4 w-full">
+                Dashboard
+              </button>
+            </Link>
           </ul>
         </div>
         <FaHeart className="text-2xl  flex absolute right-12 mr-24"></FaHeart>
