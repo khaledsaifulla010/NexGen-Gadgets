@@ -2,7 +2,7 @@
 
 ## Live-Link :
 
-### List of React Fundamental Concepts Used in This Project:
+### *List of React Fundamental Concepts Used in This Project:
 
 **1.Components** <br>
 **2.JSX (JavaScript XML)** <br>
@@ -13,12 +13,12 @@
 **7.Context API** <br>
 **8.Context Providers** <br>
 
-### I Have Used For Handling and Managing Data ---> (Context API)
+### *I Have Used For Handling and Managing Data ---> (Context API)
 
-### 5 Features of My Projects is :
+### *5 Features of My Projects is :
 
 **1.Dynamic Routes** <br>
 **2.Dynamic Statistics** <br>
-**1.Dynamically Items Sort By Price** <br>
-**1.Dynamically Add Total Price** <br>
-**1.Dynamically Change Cart & Wishlist in Dashboard Page** <br>
+**3.Dynamically Items Sort By Price** <br>
+**4.Dynamically Add Total Price** <br>
+**5.Dynamically Change Cart & Wishlist in Dashboard Page** <br>
