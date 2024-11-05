@@ -1,6 +1,6 @@
 # Projects Name : NextGen Gadgets
 
-## Live-Link :
+## Live-Link : https://unique-pothos-ca7319.netlify.app/
 
 ### *List of React Fundamental Concepts Used in This Project:
 
