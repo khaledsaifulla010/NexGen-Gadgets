@@ -40,6 +40,7 @@ export const CartProvider = ({ children }) => {
     setCartItems((prevItems) =>
       prevItems.filter((item) => item.product_id !== productId)
     );
+    toast.warning("Product is Deleted To Cart!");
   };
 
   const clearCart = () => {
@@ -68,6 +69,7 @@ export const CartProvider = ({ children }) => {
     setWishListItems((prevItems) =>
       prevItems.filter((item) => item.product_id !== productId)
     );
+    toast.warning("Product is Deleted To WishList!");
   };
 
   return (
