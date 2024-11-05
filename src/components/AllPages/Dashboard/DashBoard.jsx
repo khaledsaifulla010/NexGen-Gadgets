@@ -187,7 +187,7 @@ const DashBoard = () => {
           <TabPanel>
             <div className="mb-36">
               <div>
-                <h1 className="text-3xl font-bold  ">WishList</h1>
+                <h1 className="text-3xl font-bold mt-12 ">WishList</h1>
               </div>
               {wishListItems.length === 0 ? (
                 <h1 className="mt-24 text-center font-black text-5xl">

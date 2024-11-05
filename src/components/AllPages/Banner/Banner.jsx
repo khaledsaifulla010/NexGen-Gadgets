@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import banner from "../../../assets/banner.jpg";
 
 const Banner = () => {
@@ -13,9 +14,11 @@ const Banner = () => {
           it all!
         </p>
 
-        <button className="text-base border-2 p-2 rounded-3xl bg-white text-purple-600  font-black absolute mt-[350px] ml-[580px]">
-          Shop Now
-        </button>
+        <Link to={"/dashboard"}>
+          <button className="text-base border-2 p-2 rounded-3xl bg-white text-purple-600  font-black absolute mt-[350px] ml-[580px]">
+            Shop Now
+          </button>
+        </Link>
       </div>
       <div className=" border-white  rounded-3xl border-[30px] ml-[120px] absolute -bottom-72 ">
         <img className="rounded-3xl h-[400px] w-[1000px]" src={banner} />
