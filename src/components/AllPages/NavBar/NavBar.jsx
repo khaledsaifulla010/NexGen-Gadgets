@@ -1,10 +1,15 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import "./NavBar.css";
 import { FaShoppingCart, FaHeart, FaDollarSign } from "react-icons/fa";
 import { useCart, useWishList } from "../../Hooks/CartContext";
 
 const NavBar = () => {
+  // Use Use Location
+
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   const { cartItems } = useCart();
   const { wishListItems } = useWishList();
 
@@ -16,8 +21,12 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="navbar flex items-center justify-between ">
-        <div className="">
+      <div
+        className={`navbar flex items-center justify-between ${
+          isHomePage ? "bg-purple-500" : ""
+        }`}
+      >
+        <div>
           <Link to={"/"} className="flex items-center gap-2">
             <img className="w-8 mt-1" src={logo} />
             <a className="text-4xl font-black">
@@ -27,9 +36,30 @@ const NavBar = () => {
         </div>
         <div>
           <ul className="menu menu-horizontal px-1 gap-16 navbar-center  mr-36 font-semibold text-lg">
-            <NavLink to={"/"}>Home</NavLink>
-            <NavLink to={"/statistics"}>Statistics</NavLink>
-            <NavLink to={"dashboard"}>Dashboard</NavLink>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                isActive ? "text-white underline" : "text-black"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to={"/statistics"}
+              className={({ isActive }) =>
+                isActive ? "text-black underline" : "text-black"
+              }
+            >
+              Statistics
+            </NavLink>
+            <NavLink
+              to={"dashboard"}
+              className={({ isActive }) =>
+                isActive ? "text-black underline" : "text-black"
+              }
+            >
+              Dashboard
+            </NavLink>
             {/* <NavLink>Soon</NavLink> */}
           </ul>
         </div>
