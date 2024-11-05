@@ -70,37 +70,61 @@ const AllProducts = () => {
         <div className="border-2 w-[200px] h-[450px] p-2 ">
           <button
             onClick={handleAllProducts}
-            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-4"
+            className={`w-full p-2 rounded-xl font-black mt-4 ${
+              showProducts === "all"
+                ? "bg-purple-500 text-white"
+                : "bg-slate-100"
+            }`}
           >
             All Products
           </button>
           <button
             onClick={handleAllLaptops}
-            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-8"
+            className={`w-full p-2 rounded-xl font-black mt-8 ${
+              showProducts === "Laptops"
+                ? "bg-purple-500 text-white"
+                : "bg-slate-100"
+            }`}
           >
             Laptops
           </button>
           <button
             onClick={handleAllPhones}
-            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-8"
+            className={`w-full p-2 rounded-xl font-black mt-8 ${
+              showProducts === "Phones"
+                ? "bg-purple-500 text-white"
+                : "bg-slate-100"
+            }`}
           >
             Phones
           </button>
           <button
             onClick={handleAllAccessories}
-            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-8"
+            className={`w-full p-2 rounded-xl font-black mt-8 ${
+              showProducts === "Accessories"
+                ? "bg-purple-500 text-white"
+                : "bg-slate-100"
+            }`}
           >
             Accessories
           </button>
           <button
             onClick={handleAllSmartwatches}
-            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-8"
+            className={`w-full p-2 rounded-xl font-black mt-8 ${
+              showProducts === "Smartwatches"
+                ? "bg-purple-500 text-white"
+                : "bg-slate-100"
+            }`}
           >
             Smartwatch
           </button>
           <button
             onClick={handleAllMacbooks}
-            className="w-full p-2 rounded-xl bg-slate-100 font-black mt-8"
+            className={`w-full p-2 rounded-xl font-black mt-8 ${
+              showProducts === "Macbooks"
+                ? "bg-purple-500 text-white"
+                : "bg-slate-100"
+            }`}
           >
             Macbooks
           </button>
